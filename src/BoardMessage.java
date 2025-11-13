@@ -3,9 +3,8 @@ import java.util.Date;
 public class BoardMessage extends Message {
 
     private Priority priority;
-    private String category; // שדה נוסף לבחירה
+    private String category;
 
-    // בנאי מלא
     public BoardMessage(String sender, String content, Date sendDate, boolean isRead,
                         Priority priority, String category) {
         super(sender, content, sendDate, isRead);
@@ -51,12 +50,10 @@ public class BoardMessage extends Message {
                ", Category: " + category;
     }
 
-    // מתודה נוספת לבחירתנו
     public boolean isUrgent() {
         return priority == Priority.URGENT;
     }
 
-    // generatePreview
     @Override
     public String generatePreview() {
         String shortContent = getContent();
