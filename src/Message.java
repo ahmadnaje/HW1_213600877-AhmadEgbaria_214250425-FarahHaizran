@@ -6,9 +6,8 @@ public abstract class Message {
     private String sender;
     private String content;
     private Date sendDate;
-    private boolean isRead;   // שדה נוסף משותף לכל ההודעות
+    private boolean isRead;
 
-    // בנאי מלא
     public Message(String sender, String content, Date sendDate, boolean isRead) {
         setSender(sender);
         setContent(content);
@@ -16,7 +15,6 @@ public abstract class Message {
         this.isRead = isRead;
     }
 
-    // בנאי שמייצר תאריך לבד
     public Message(String sender, String content, boolean isRead) {
         this(sender, content, new Date(), isRead);
     }
@@ -55,7 +53,6 @@ public abstract class Message {
         this.isRead = true;
     }
 
-    // find – האם אחת מהמילים נמצאת בתוך ההודעה
     public boolean find(ArrayList<String> words) {
         for (String w : words) {
             if (content.toLowerCase().contains(w.toLowerCase())) {
@@ -73,6 +70,5 @@ public abstract class Message {
                ", Read: " + isRead;
     }
 
-    // חובה: כל מחלקה יורשת תדרוס
     public abstract String generatePreview();
 }
