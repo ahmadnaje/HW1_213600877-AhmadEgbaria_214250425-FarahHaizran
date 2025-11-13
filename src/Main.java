@@ -9,8 +9,6 @@ public class Main {
         Scanner sc = new Scanner(System.in);
         ArrayList<Message> messages = new ArrayList<>();
 
-        // --- הוספת 2 הודעות מכל סוג ---
-
         // BoardMessage
         messages.add(new BoardMessage("Dana", "Important update for class", new Date(), false, Priority.URGENT, "School"));
         messages.add(new BoardMessage("Yossi", "Meeting at 18:00 today", false, "Work"));
@@ -22,7 +20,6 @@ public class Main {
         messages.add(new EmailMessage("Noa", "Here is the project submission", new Date(), false, "Project Submission", attach1));
         messages.add(new EmailMessage("Rina", "Don't forget tomorrow's deadline!", false, "Reminder"));
 
-        // ChatMessage
         try {
             messages.add(new ChatMessage("Avi", "Hey, are you coming?", new Date(), false, "FriendsChat"));
             messages.add(new ChatMessage("Lior", "Good morning!", false, "FamilyRoom"));
@@ -30,7 +27,6 @@ public class Main {
             System.out.println(e.getMessage());
         }
 
-        // --- תפריט משתמש ---
         int choice = -1;
 
         while (choice != 0) {
