@@ -4,14 +4,12 @@ public class ChatMessage extends Message implements IDigital {
 
     private String chatRoomName;
 
-    // בנאי מלא
     public ChatMessage(String sender, String content, Date sendDate, boolean isRead,
                        String chatRoomName) throws ChatRoomException {
         super(sender, content, sendDate, isRead);
         setChatRoomName(chatRoomName);
     }
 
-    // בנאי ללא תאריך (נוצר לבד)
     public ChatMessage(String sender, String content, boolean isRead,
                        String chatRoomName) throws ChatRoomException {
         super(sender, content, isRead);
