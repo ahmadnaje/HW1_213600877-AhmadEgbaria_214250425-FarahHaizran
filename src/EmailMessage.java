@@ -6,7 +6,6 @@ public class EmailMessage extends Message implements IDigital {
     private String subject;
     private ArrayList<File> attachments;
 
-    // בנאי מלא
     public EmailMessage(String sender, String content, Date sendDate, boolean isRead,
                         String subject, ArrayList<File> attachments) {
         super(sender, content, sendDate, isRead);
@@ -18,7 +17,6 @@ public class EmailMessage extends Message implements IDigital {
             this.attachments = new ArrayList<>();
     }
 
-    // בנאי ללא תאריך וללא attachments
     public EmailMessage(String sender, String content, boolean isRead, String subject) {
         super(sender, content, isRead);
         setSubject(subject);
